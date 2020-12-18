@@ -1,0 +1,42 @@
+#Problem 1 (done?)
+count=0
+value=0
+print (count)
+print (value)
+while value < 1000:
+    if value %3 or value%5 ==0:
+        count= count+1
+        value= value+1 
+    else: 
+        value= value+1
+if value == 1000:
+    print(count)
+#Problem 2 (not done)
+totalnumber = 41
+x=0
+y=1
+count = 0
+
+while count < totalnumber:
+    fiblist=[]
+    fib = x + y
+    fiblist.append(fib)
+    x = fiblist[-1]
+    y = fib
+    count += 1
+print(fiblist)
+#figure out how to use the while loop to add numbers instead of just having a single item in that list 
+
+#Problem 3 (done!)
+number=600851475143
+primeFactor = 1
+x = 2
+
+while x <= number /x:
+    if number %i == 0:
+        primeFactor = x
+        number /= x
+    else:
+        x =x+ 1
+
+print (primeFactor)
