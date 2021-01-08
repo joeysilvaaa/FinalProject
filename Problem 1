@@ -40,3 +40,51 @@ while x <= number /x:
         x =x+ 1
 
 print (primeFactor)
+
+#############
+##problem 4##
+#############
+largestPalendrome= 0
+#keeps track of the largest palendrome saved
+for x in range (100,999):
+    for y in range (100,999):
+        #the problem requires two variables that are three digits, which is why both x and y are present
+        palendrome = x * y
+        if str(palendrome) == str(palendrome)[::-1]:
+            #checks if x*y is a palendrome 
+            if palendrome > largestPalendrome:
+                #checks to see if the palendrome is the largest one yet
+                largestPalendrome = palendrome
+                
+print (largestPalendrome)
+
+
+#############
+##problem 5##
+#############
+from math import gcd
+from functools import reduce
+x = 0
+y = 0
+for x in range (1,42):
+    for y in range (1,42):
+        lcm = x*y//gcd(x,y)
+print (lcm)
+
+#############
+##problem 6##
+#############
+numbers = []
+numbers.extend(range(1,101))
+#creates a list with values 1-100
+squarednumbers= [number ** 2 for number in numbers]
+#squares the numbers in the list
+SquaredSum = sum(squarednumbers) 
+#adds those numbers together
+SumSquared = sum(numbers) **2
+#adds numbers 1-100 together and then squares it 
+final = SumSquared - SquaredSum
+#finds the difference 
+print(final)
+
+
